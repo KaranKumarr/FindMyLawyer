@@ -1,0 +1,129 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    font-family: "Lora", serif;
+  }
+}
+
+@layer components {
+  h1 {
+    @apply font-medium leading-tight text-5xl;
+  }
+  h2 {
+    @apply font-medium leading-tight text-4xl;
+  }
+  h3 {
+    @apply font-medium leading-tight text-3xl;
+  }
+  h4 {
+    @apply font-medium leading-tight text-2xl;
+  }
+  h5 {
+    @apply font-medium leading-tight text-xl;
+  }
+  h6 {
+    @apply font-medium leading-tight text-base;
+  }
+
+  /* remaining height */
+  .r-h {
+    @apply lg:min-h-[87.5vh];
+  }
+  .max-r-h {
+    @apply lg:max-h-[87.5vh];
+  }
+
+  .nav-link {
+    @apply leading-tight text-center px-4 capitalize transition-all underline underline-offset-1 hover:underline-offset-2 hover:opacity-80 my-8 text-2xl sm:text-xl sm:my-0;
+  }
+
+  .btn {
+    @apply rounded-lg font-medium  text-xl tracking-wide px-4 py-2 transition-all hover:rounded-xl hover:opacity-95;
+  }
+
+  .primary-btn {
+    @apply bg-primary text-neutral btn;
+  }
+
+  .secondary-btn {
+    @apply border-2 border-secondary-b text-secondary-b btn;
+  }
+  .secondary-btn-filled {
+    @apply secondary-btn bg-secondary-b text-white;
+  }
+
+  .tertiary-btn {
+    @apply font-medium text-secondary-b hover:underline btn;
+  }
+
+  .circle {
+    @apply h-16 w-16 absolute bg-primary-700 rounded-full shadow-lg;
+  }
+
+  .label {
+    @apply text-secondary-b text-xl;
+  }
+
+  .standard-input {
+    @apply bg-neutral-contrast bg-opacity-5 my-2 py-2 px-4 rounded-lg placeholder:text-neutral-contrast placeholder:text-opacity-50 outline-neutral-contrast border border-transparent invalid:border-exception valid:border-primary-600 resize-none;
+  }
+
+  .category-tag {
+    @apply text-neutral bg-secondary-b py-0.5 px-1 rounded-lg mx-1 cursor-pointer capitalize;
+  }
+
+  .card-board {
+    @apply bg-white rounded-2xl flex flex-col flex-grow;
+  }
+  .table-card {
+    @apply flex justify-between bg-secondary-b bg-opacity-10;
+  }
+  .table-card p {
+    @apply text-neutral-contrast border border-secondary-b py-2 px-5 flex items-center justify-center;
+  }
+  .table-card input[type="time"] {
+    @apply bg-transparent rounded-md p-1 mx-1 border-2 border-neutral-contrast;
+  }
+  .table-section {
+    @apply flex flex-col container pt-10  r-h;
+  }
+  .table-heading {
+    @apply flex justify-between bg-primary-700 rounded-t-md;
+  }
+  .table-heading h5 {
+    @apply text-neutral border border-primary-400 text-center  py-2 px-5;
+  }
+
+  .timing-line {
+    @apply flex justify-between bg-primary bg-opacity-20 p-2.5 w-96 rounded-lg;
+  }
+  .timing-line h6 {
+    @apply uppercase font-medium;
+  }
+
+  .slot-box {
+    @apply flex justify-center uppercase font-semibold w-20 p-1 border-2 border-neutral-contrast border-opacity-20 text-primary-600 bg-primary bg-opacity-20 rounded-lg cursor-pointer transition-all;
+  }
+  .slot-box-active {
+    @apply slot-box bg-neutral text-neutral-contrast;
+  }
+
+  .appointment-history {
+    @apply flex items-center bg-neutral text-neutral-contrast p-5 rounded-lg gap-5 w-full;
+  }
+  .appointment-history > img {
+    @apply w-28 h-28 object-cover rounded-lg border border-neutral-contrast border-opacity-50;
+  }
+  .appointment-history h5 {
+    @apply font-semibold text-secondary-b;
+  }
+  .appointment-history p {
+    @apply font-medium;
+  }
+  .appointment-history button {
+    @apply secondary-btn;
+  }
+}
